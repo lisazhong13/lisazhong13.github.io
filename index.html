@@ -4,16 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Personal portfolio website" />
-  <title>Lisa Zhong | Portfolio</title>
+  <title>Jingwen (Lisa) Zhong | Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
     <nav class="nav">
-      <a href="#home" class="logo">Lisa Zhong</a>
+      <a href="#home" class="logo">Jingwen (Lisa) Zhong</a>
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
+        <a href="#research">Research</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
@@ -25,15 +26,18 @@
     <section id="home" class="hero section">
       <div class="hero-text">
         <p class="eyebrow">Actuarial • Data Science • Machine Learning</p>
-        <h1>Hi, I'm Lisa — I build data-driven tools, models, and analytics for real business problems.</h1>
+        <h1>Hi, I'm Jingwen (Lisa) — I build data-driven tools, models, and analytics for real business problems.</h1>
         <p class="hero-subtitle">
-          Undergraduate student at the University of Toronto with experience in actuarial pricing,
+          Incoming MScAC student at the University of Toronto with experience in actuarial pricing,
           data analysis, statistical modeling, and ML research.
         </p>
         <div class="button-row">
           <a class="button primary" href="#projects">View Projects</a>
-          <a class="button secondary" href="resume.pdf" target="_blank">Download Resume</a>
+          <a class="button secondary" href="Jingwen Zhong CV.pdf" target="_blank">Download CV</a>
         </div>
+      </div>
+      <div class="hero-media">
+        <img src="selfie.JPG" alt="Portrait of Jingwen (Lisa) Zhong" class="hero-photo" />
       </div>
     </section>
 
@@ -41,24 +45,56 @@
       <div>
         <p class="section-label">About</p>
         <h2>Turning messy data into clear decisions.</h2>
+        <p class="about-intro">
+          I am interested in data science, actuarial analytics, and machine learning. My work spans
+          pricing model validation, automated data pipelines, statistical analysis, and research projects involving
+          deep learning and computer vision.
+        </p>
       </div>
-      <p>
-        I am interested in data science, actuarial analytics, and machine learning. My work spans
-        pricing model validation, automated data pipelines, statistical analysis, and research projects
-        involving medical images and meteorological downscaling.
-      </p>
+      <div class="about-details">
+        <p><strong>Education:</strong></p>
+        <ul class="about-education">
+          <li>B.Sc. in Data Science Specialist & Actuarial Science Major, University of Toronto (Sep 2022 - May 2026)</li>
+          <li>Incoming M.Sc. in Applied Comupting -- Data Science Concentration, University of Toronto (Sep 2026 - Present)</li>
+        </ul>
+
+        <p><strong>Awards:</strong></p>
+        <ul class="about-awards">
+          <li>Vector Scholarship in Artificial Intelligence, 2026-27 ($17,500)</li>
+          <li>University of Toronto Excellence Award (UTEA), 2024 and 2025 ($15,000)</li>
+          <li>Department of Computer Science Research Award, 2025 ($7,500, declined)</li>
+          <li>The Robert Bruce Scholarship and Bursary Fund ($1,000)</li>
+          <li>Dean's List, all academic years</li>
+          <li>New College Council In-Course Scholarship ($750)</li>
+          <li>Actuarial Science Conference Travel Award ($200)</li>
+        </ul>
+      </div>
     </section>
 
     <section id="experience" class="section">
       <p class="section-label">Experience</p>
-      <h2>Experience</h2>
+      <h2>Work Experiences</h2>
       <div class="card-grid">
         <article class="card">
           <div class="card-top">
-            <h3>Actuarial Intern — Ontario Street Pricing</h3>
-            <span>Aviva</span>
+            <h3>Actuarial and Data Science Intern</h3>
+            <span>Aviva Canada</span>
           </div>
-          <p class="date">Summer 2025</p>
+          <p class="date">Jan 2026 - Apr 2026</p>
+          <ul>
+            <li>Designed and automated a data pipeline using SAS, SQL, and Python to ingest and process loss data.</li>
+            <li>Developed logic to merge and reconcile datasets across different granularities (policy-level and claim-level).</li>
+            <li>Built user-facing SAS tools enabling dynamic data extraction and filtering.</li>
+            <li>Investigated data inconsistencies across systems, identifying root causes of premium discrepancies through structured data validation.</li>
+          </ul>
+        </article>
+        
+        <article class="card">
+          <div class="card-top">
+            <h3>Actuarial Intern — Ontario Personal Private Vehicles Pricing</h3>
+            <span>Aviva Canada</span>
+          </div>
+          <p class="date">May 2025 - Aug 2026</p>
           <ul>
             <li>Supported actuarial pricing using SAS, SQL, Earnix, Excel VBA, and Python.</li>
             <li>Automated loss and exposure data preparation, reducing review time by around 30%.</li>
@@ -70,13 +106,143 @@
         <article class="card">
           <div class="card-top">
             <h3>Data Science Intern</h3>
-            <span>Upcoming</span>
+            <span>Intact</span>
           </div>
-          <p class="date">Summer 2026</p>
+          <p class="date">May 2026 - Present</p>
           <ul>
-            <li>Add company/team once confirmed.</li>
-            <li>Use this section to highlight modeling, analytics, experimentation, or product impact.</li>
+            <li>More information coming soon.</li>
           </ul>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <h3>Data Analytics Intern</h3>
+            <span>University of Toronto</span>
+          </div>
+          <p class="date">May 2024 - Sep 2024</p>
+          <ul>
+            <li>Developed and deployed an integrated full-stack information management system with MySQL and Power BI integration using JavaScript. Provided a full-cycle data collection, analysis, and visualization service from user to admin. </li>
+            <li>Built an end-to-end data pipeline for the collection and analysis of data for visualization for the budgeting department.</li>
+            <li>Processed and analyzed data using Excel VBA and developed interactive dashboards in Power BI to visualize KPIs of budget variance, departmental expenditures, and forecasting accuracy, supporting evidence-based decision-making.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="research" class="section">
+      <p class="section-label">Research</p>
+      <h2>Research Experiences</h2>
+      <div class="research-grid">
+        <article class="card research-card">
+          <div class="research-left">
+            <h3>The Modeling and Animation of Extreme Weather Events</h3>
+            <p>Supervisor: Dr. Ron Baecker</p>
+            <ul>
+              <li>Built an end-to-end wildfire forecasting inference pipeline using Microsoft's Aurora model, deriving Fire Weather Index (FWI) and injecting outputs into the Fire Behavior Prediction (FBP) system.</li>
+              <li>Implemented scalable Python workflows on Linux clusters for Aurora inference and downstream wildfire modeling to support efficient processing and evaluation.</li>
+              <li>Produced geospatial visualizations of predicted fire hazard rates using ggplot and ggspatial in R for landscape-level communication of climate risk.</li>
+            </ul>
+            <p class="project-links">
+              <a href="https://envisioningclimatefutures.org/" target="_blank" rel="noopener noreferrer">Project Website</a>
+            </p>
+            <div class="tags"><span>Python</span><span>R</span><span>Linux</span><span>Geospatial</span></div>
+          </div>
+          <aside class="research-right">
+            <p class="date">Aug 2025 - Present</p>
+            <p>Department of Computer Science & Dynamic Graphics Project, University of Toronto</p>
+            <video class="research-media" controls preload="metadata">
+              <source src="fortmac_fire_spread.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </aside>
+        </article>
+
+        <article class="card research-card">
+          <div class="research-left">
+            <h3>Satellite Image Downscaling</h3>
+            <p>Supervisor: Dr. Meredith Franklin</p>
+            <ul>
+              <li>Developed deep learning and transfer learning models for satellite resolution calibration and downscaling, improving spatial resolution from 50 km to 7 km with mean R^2 around 0.9.</li>
+              <li>Pretrained a U-Net and transferred to a large DDPM model with time-series dust extinction data and static covariates to generate high-resolution outputs.</li>
+              <li>Improved accuracy with region- and season-specific training, cross-validation, and early stopping, reaching R^2 up to 0.94 and RMSE below 0.02.</li>
+              <li>Co-authoring a manuscript on the downscaling framework for peer-reviewed journal submission.</li>
+            </ul>
+            <p class="project-links">
+              <a href="https://docs.google.com/presentation/d/1V_SII1m_vnOxz8w1mrO5Oj0KgmSX7KgIzwWHbQLjejQ/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Presentation</a>
+              <span>•</span>
+              <a href="https://arxiv.org/abs/2512.05139" target="_blank" rel="noopener noreferrer">Paper</a>
+            </p>
+            <div class="tags"><span>PyTorch</span><span>U-Net</span><span>DDPM</span><span>VAE</span><span>Time Series</span></div>
+          </div>
+          <aside class="research-right">
+            <p class="date">May 2025 - Present</p>
+            <p>Department of Statistical Sciences, University of Toronto</p>
+            <div class="research-media-stack">
+              <img class="research-media" src="downscale.png" alt="Satellite image downscaling prediction example map" />
+              <img class="research-media" src="pipeline.png" alt="Satellite image downscaling model pipeline diagram" />
+            </div>
+          </aside>
+        </article>
+
+        <article class="card research-card">
+          <div class="research-left">
+            <h3>LLM in Patent Analysis</h3>
+            <p>Supervisors: Dr. Loren Brandt & Dr. Kevin Lim</p>
+            <ul>
+              <li>Implemented an unsupervised topic-modeling pipeline for 260,000+ UAV patents using Cohere embeddings, UMAP, HDBSCAN, and BERTopic, reducing output topics by 30%.</li>
+              <li>Improved robustness and clustering quality via hyperparameter tuning, abstract-vs-claim embedding comparisons, and OpenAI API integration.</li>
+              <li>Mapped patents into value-chain and patentee taxonomies using keyword extraction, semantic distance, and entity resolution.</li>
+              <li>Delivered visual analytics including topic maps and similarity heatmaps to communicate research findings.</li>
+            </ul>
+            <div class="tags"><span>LLM</span><span>BERTopic</span><span>UMAP</span><span>HDBSCAN</span></div>
+          </div>
+          <aside class="research-right">
+            <p class="date">Sep 2024 - Sep 2025</p>
+            <p>Department of Economics, University of Toronto</p>
+            <img class="research-media" src="LLM.png" alt="Patent analysis topic maps" />
+          </aside>
+        </article>
+
+        <article class="card research-card">
+          <div class="research-left">
+            <h3>AI and Machine Learning in Medical Imaging</h3>
+            <p>Supervisor: Dr. Pascal Tyrrell</p>
+            <ul>
+              <li>Benchmarked SSIM, PSNR, and LPIPS on GAN and diffusion outputs for medical images under compression, noise, and downsizing degradations using Python.</li>
+              <li>Optimized GPU-level tensor workflows in TensorFlow and PyTorch to efficiently process large-scale datasets.</li>
+              <li>Validated findings with ANOVA in SAS, achieving statistical significance (p-value below 0.001) and identifying LPIPS as the best-performing metric.</li>
+            </ul>
+            <p class="project-links">
+              <a href="https://docs.google.com/document/d/1x57AakdsZL19lKjDblcU4ZzP31o_DKxS/edit?usp=sharing&amp;ouid=102035524745160038768&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener noreferrer">Report</a>
+              <span>•</span>
+              <a href="https://drive.google.com/file/d/15aj5cqmBIoQO_3qSXhT9W-H33etxMxBa/view?usp=sharing" target="_blank" rel="noopener noreferrer">Poster</a>
+            </p>
+            <div class="tags"><span>Python</span><span>SAS</span><span>PyTorch</span><span>TensorFlow</span></div>
+          </div>
+          <aside class="research-right">
+            <p class="date">May 2024 - Sep 2024</p>
+            <p>Prof. Tyrrell's Lab</p>
+            <img class="research-media" src="medical_images.png" alt="Medical image processing results" />
+          </aside>
+        </article>
+
+        <article class="card research-card">
+          <div class="research-left">
+            <h3>Oceans' Long-Term Response to IPCC Emission Scenarios</h3>
+            <p>Supervisor: Dr. Ulrich Wortmann</p>
+            <ul>
+              <li>Built a model to predict long-term impacts of carbon dioxide (CO2) emissions on ocean systems and back-tested with historical climate data.</li>
+              <li>Optimized hypsometric modeling code using a grid method and multi-threading, improving efficiency by 110%.</li>
+              <li>Developed comparative climate visualizations under RCP scenarios using Matplotlib.</li>
+              <li>Contributed to ESBMTK, a published open-source climate modeling toolkit adopted in research and teaching (Geoscientific Model Development, 2025).</li>
+            </ul>
+            <div class="tags"><span>Python</span><span>Climate Modeling</span><span>Matplotlib</span><span>Open Source</span></div>
+          </div>
+          <aside class="research-right">
+            <p class="date">May 2024 - Aug 2024</p>
+            <p>Department of Earth Sciences, University of Toronto</p>
+            <img class="research-media" src="ocean_chemistry.png" alt="ESBMTK logo" />
+          </aside>
         </article>
       </div>
     </section>
@@ -85,22 +251,48 @@
       <p class="section-label">Projects</p>
       <h2>Selected Projects</h2>
       <div class="card-grid">
+        
+
         <article class="card project-card">
-          <h3>Medical Image Quality Evaluation</h3>
+          <div class="card-top">
+            <h3>CAS Case Competition: Hurricane Insurance Visualization (First Place)</h3>
+            <span>Feb 2025</span>
+          </div>
           <p>
-            Evaluated SSIM, PSNR, and LPIPS for colonoscopy polyp images and diffusion-generated images
-            under contrast enhancement and degradation settings.
+            Built an interactive full-stack hurricane insurance visualization app with JavaScript, D3.js, Leaflet.js,
+            Python, SQL, and PostgreSQL, including end-to-end data preprocessing and query-driven retrieval pipelines.
+            Won first place as the regional champion in the 2025 CAS Case Competition.
           </p>
-          <div class="tags"><span>Python</span><span>OpenCV</span><span>PyTorch</span></div>
+          <p class="project-links">
+            <a href="https://lisazhong13.github.io/CAS-CaseComp-Storm-Map/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+          </p>
+          <div class="tags"><span>JavaScript</span><span>D3.js</span><span>Leaflet.js</span><span>PostgreSQL</span><span>Python</span><span>SQL</span></div>
         </article>
 
         <article class="card project-card">
-          <h3>Meteorological Downscaling with U-Net</h3>
+          <div class="card-top">
+            <h3>Learning Agency Lab - PII Detection (Kaggle Bronze Medal, Top 9%)</h3>
+            <span>Feb 2024 - May 2024</span>
+          </div>
           <p>
-            Built and evaluated large-scale downscaling pipelines using G5NR and MERRA-2 data, SLURM jobs,
-            NetCDF processing, and seasonal validation metrics.
+            Developed and fine-tuned a DeBERTa-v3 model for PII detection on 7,000 essays, then expanded training with
+            11,000+ OpenAI-generated essays and automated semantic entity extraction to improve robustness. Achieved
+            95.74% F1, earning a Kaggle bronze medal and top 9% placement among 2,050 teams.
           </p>
-          <div class="tags"><span>PyTorch</span><span>xarray</span><span>SLURM</span></div>
+          <div class="tags"><span>LLM</span><span>DeBERTa-v3</span><span>Kaggle</span><span>NLP</span><span>OpenAI API</span></div>
+        </article>
+
+        <article class="card project-card">
+          <div class="card-top">
+            <h3>CAS Case Competition: Home Insurance Pricing (North America Regional Champion)</h3>
+            <span>Feb 2024</span>
+          </div>
+          <p>
+            Designed a GLM-based home insurance discount strategy using consumer segmentation analysis to balance
+            profitability and market competitiveness under adverse selection conditions. Won North America regional
+            champion in the 2024 CAS Case Competition.
+          </p>
+          <div class="tags"><span>Python</span><span>GLM</span><span>Insurance Pricing</span><span>Segmentation</span></div>
         </article>
 
         <article class="card project-card">
@@ -108,6 +300,9 @@
           <p>
             Applied PCA, factor analysis, robust covariance checks, and GMM clustering to explore health and
             cardiometabolic patterns in NHANES data.
+          </p>
+          <p class="project-links">
+            <a href="https://drive.google.com/file/d/1fv6ZoDH9sWIDf9pm_weSgOpod11M5WvM/view?usp=sharing" target="_blank" rel="noopener noreferrer">Report</a>
           </p>
           <div class="tags"><span>Statistics</span><span>PCA</span><span>GMM</span></div>
         </article>
@@ -119,7 +314,7 @@
       <h2>Technical Skills</h2>
       <div class="skill-list">
         <span>Python</span><span>R</span><span>SQL</span><span>SAS</span><span>Excel VBA</span>
-        <span>PyTorch</span><span>scikit-learn</span><span>xarray</span><span>OpenCV</span>
+        <span>PyTorch</span><span>TensorFlow</span><span>scikit-learn</span><span>xarray</span><span>OpenCV</span>
         <span>Git</span><span>SLURM</span><span>Earnix</span>
       </div>
     </section>
@@ -127,17 +322,16 @@
     <section id="contact" class="section contact">
       <p class="section-label">Contact</p>
       <h2>Let's connect.</h2>
-      <p>Replace the links below with your real email, LinkedIn, and GitHub.</p>
       <div class="button-row">
-        <a class="button primary" href="mailto:your.email@example.com">Email</a>
-        <a class="button secondary" href="https://www.linkedin.com/in/your-linkedin" target="_blank">LinkedIn</a>
-        <a class="button secondary" href="https://github.com/your-github" target="_blank">GitHub</a>
+        <a class="button primary" href="mailto:lisazjw.zhong@mail.utoronto.ca">Email</a>
+        <a class="button secondary" href="https://www.linkedin.com/in/jingwenzhong/" target="_blank">LinkedIn</a>
+        <a class="button secondary" href="https://github.com/lisazhong13" target="_blank">GitHub</a>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>© <span id="year"></span> Lisa Zhong. Built with GitHub Pages.</p>
+    <p>© <span id="year"></span> Jingwen (Lisa) Zhong. Built with GitHub Pages.</p>
   </footer>
 
   <script src="script.js"></script>
