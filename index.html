@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personal portfolio website" />
+  <title>Lisa Zhong | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a href="#home" class="logo">Lisa Zhong</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero section">
+      <div class="hero-text">
+        <p class="eyebrow">Actuarial • Data Science • Machine Learning</p>
+        <h1>Hi, I'm Lisa — I build data-driven tools, models, and analytics for real business problems.</h1>
+        <p class="hero-subtitle">
+          Undergraduate student at the University of Toronto with experience in actuarial pricing,
+          data analysis, statistical modeling, and ML research.
+        </p>
+        <div class="button-row">
+          <a class="button primary" href="#projects">View Projects</a>
+          <a class="button secondary" href="resume.pdf" target="_blank">Download Resume</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section two-column">
+      <div>
+        <p class="section-label">About</p>
+        <h2>Turning messy data into clear decisions.</h2>
+      </div>
+      <p>
+        I am interested in data science, actuarial analytics, and machine learning. My work spans
+        pricing model validation, automated data pipelines, statistical analysis, and research projects
+        involving medical images and meteorological downscaling.
+      </p>
+    </section>
+
+    <section id="experience" class="section">
+      <p class="section-label">Experience</p>
+      <h2>Experience</h2>
+      <div class="card-grid">
+        <article class="card">
+          <div class="card-top">
+            <h3>Actuarial Intern — Ontario Street Pricing</h3>
+            <span>Aviva</span>
+          </div>
+          <p class="date">Summer 2025</p>
+          <ul>
+            <li>Supported actuarial pricing using SAS, SQL, Earnix, Excel VBA, and Python.</li>
+            <li>Automated loss and exposure data preparation, reducing review time by around 30%.</li>
+            <li>Reconciled data discrepancies and improved consistency across pricing sources.</li>
+            <li>Prepared broker-facing analysis explaining pricing changes and customer impact.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <h3>Data Science Intern</h3>
+            <span>Upcoming</span>
+          </div>
+          <p class="date">Summer 2026</p>
+          <ul>
+            <li>Add company/team once confirmed.</li>
+            <li>Use this section to highlight modeling, analytics, experimentation, or product impact.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <p class="section-label">Projects</p>
+      <h2>Selected Projects</h2>
+      <div class="card-grid">
+        <article class="card project-card">
+          <h3>Medical Image Quality Evaluation</h3>
+          <p>
+            Evaluated SSIM, PSNR, and LPIPS for colonoscopy polyp images and diffusion-generated images
+            under contrast enhancement and degradation settings.
+          </p>
+          <div class="tags"><span>Python</span><span>OpenCV</span><span>PyTorch</span></div>
+        </article>
+
+        <article class="card project-card">
+          <h3>Meteorological Downscaling with U-Net</h3>
+          <p>
+            Built and evaluated large-scale downscaling pipelines using G5NR and MERRA-2 data, SLURM jobs,
+            NetCDF processing, and seasonal validation metrics.
+          </p>
+          <div class="tags"><span>PyTorch</span><span>xarray</span><span>SLURM</span></div>
+        </article>
+
+        <article class="card project-card">
+          <h3>NHANES Multivariate Analysis</h3>
+          <p>
+            Applied PCA, factor analysis, robust covariance checks, and GMM clustering to explore health and
+            cardiometabolic patterns in NHANES data.
+          </p>
+          <div class="tags"><span>Statistics</span><span>PCA</span><span>GMM</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <p class="section-label">Skills</p>
+      <h2>Technical Skills</h2>
+      <div class="skill-list">
+        <span>Python</span><span>R</span><span>SQL</span><span>SAS</span><span>Excel VBA</span>
+        <span>PyTorch</span><span>scikit-learn</span><span>xarray</span><span>OpenCV</span>
+        <span>Git</span><span>SLURM</span><span>Earnix</span>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <p class="section-label">Contact</p>
+      <h2>Let's connect.</h2>
+      <p>Replace the links below with your real email, LinkedIn, and GitHub.</p>
+      <div class="button-row">
+        <a class="button primary" href="mailto:your.email@example.com">Email</a>
+        <a class="button secondary" href="https://www.linkedin.com/in/your-linkedin" target="_blank">LinkedIn</a>
+        <a class="button secondary" href="https://github.com/your-github" target="_blank">GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Lisa Zhong. Built with GitHub Pages.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
