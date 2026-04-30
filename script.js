@@ -110,7 +110,7 @@ async function submitQuestion(rawQuestion) {
 
   try {
     const reply = await fetchAssistantReply(question);
-    chatMessages.lastChild.textContent = `${reply}\n\nResume: ${CHAT_CONFIG.resumeLink}`;
+    chatMessages.lastChild.textContent = reply;
   } catch (error) {
     chatMessages.lastChild.textContent =
       "The AI assistant is temporarily rate-limited. Please try again in a few minutes.";
