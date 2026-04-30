@@ -1,4 +1,4 @@
-const GEMINI_MODEL = "gemini-2.0-flash";
+const GEMINI_MODEL = "gemini-2.0-flash-lite";
 
 function getGeminiUrl(apiKey) {
   return `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${apiKey}`;
@@ -84,7 +84,7 @@ module.exports = async function handler(req, res) {
         contents: conversation,
         generationConfig: {
           temperature: 0.4,
-          maxOutputTokens: 500,
+          maxOutputTokens: 300,
         },
         safetySettings: [
           { category: "HARM_CATEGORY_HATE_SPEECH", threshold: "BLOCK_ONLY_HIGH" },

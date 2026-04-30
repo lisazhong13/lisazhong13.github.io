@@ -13,6 +13,7 @@ const CHAT_CONFIG = {
 const state = {
   messages: [],
 };
+let isSending = false;
 
 const chatFab = document.getElementById("chat-fab");
 const chatPanel = document.getElementById("chat-panel");
@@ -92,19 +93,31 @@ async function fetchAssistantReply(userQuestion) {
 }
 
 async function submitQuestion(rawQuestion) {
+  if (isSending) return;
+  isSending = true;
+
   const question = rawQuestion.trim();
-  if (!question) return;
+  if (!question) {
+    isSending = false;
+    return;
+  }
 
   openChat();
   addUserMessage(question);
   addAssistantMessage("Thinking...");
+  chatSend.disabled = true;
+  heroSend.disabled = true;
 
   try {
     const reply = await fetchAssistantReply(question);
     chatMessages.lastChild.textContent = `${reply}\n\nResume: ${CHAT_CONFIG.resumeLink}`;
   } catch (error) {
     chatMessages.lastChild.textContent =
-      "Sorry, I could not reach the AI service right now. Please try again after backend deployment.";
+      "The AI assistant is temporarily rate-limited. Please try again in a few minutes.";
+  } finally {
+    chatSend.disabled = false;
+    heroSend.disabled = false;
+    isSending = false;
   }
 }
 
