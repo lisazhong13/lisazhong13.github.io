@@ -36,6 +36,13 @@
           <a class="button primary" href="#projects">View Projects</a>
           <a class="button secondary" href="Jingwen Zhong CV.pdf" target="_blank">Download CV</a>
         </div>
+        <div class="hero-ai-box">
+          <label for="hero-ai-input">Ask Lisa AI</label>
+          <div class="hero-ai-row">
+            <input id="hero-ai-input" type="text" placeholder="Ask about my projects, skills, or experience" />
+            <button id="hero-ai-send" class="button primary" type="button">Ask</button>
+          </div>
+        </div>
       </div>
       <div class="hero-media">
         <img src="selfie.JPG" alt="Portrait of Jingwen (Lisa) Zhong" class="hero-photo" />
@@ -372,6 +379,28 @@
       </div>
     </section>
   </main>
+
+  <button id="chat-fab" class="chat-fab" type="button" aria-label="Open Lisa AI assistant">
+    Ask Lisa AI
+  </button>
+
+  <section id="chat-panel" class="chat-panel hidden" aria-live="polite">
+    <div class="chat-header">
+      <h3>Lisa AI Assistant</h3>
+      <button id="chat-close" class="chat-close" type="button" aria-label="Close chat">×</button>
+    </div>
+    <div id="chat-messages" class="chat-messages"></div>
+    <div class="chat-quick-questions">
+      <button class="quick-question" type="button" data-question="What is Lisa’s strongest project?">What is Lisa's strongest project?</button>
+      <button class="quick-question" type="button" data-question="Why is she a good fit for data science?">Why is she a good fit for data science?</button>
+      <button class="quick-question" type="button" data-question="Explain her insurance pricing experience.">Explain her insurance pricing experience.</button>
+      <button class="quick-question" type="button" data-question="What technical skills does she have?">What technical skills does she have?</button>
+    </div>
+    <div class="chat-input-row">
+      <input id="chat-input" type="text" placeholder="Type your question..." />
+      <button id="chat-send" class="button primary" type="button">Send</button>
+    </div>
+  </section>
 
   <footer>
     <p>© <span id="year"></span> Jingwen (Lisa) Zhong. Built with GitHub Pages.</p>
