@@ -80,11 +80,10 @@ async function fetchAssistantReply(userQuestion) {
     body: JSON.stringify(buildApiPayload(userQuestion)),
   });
 
+  const data = await response.json().catch(() => ({}));
   if (!response.ok) {
-    throw new Error(`Chat API error: ${response.status}`);
+    throw new Error(data.error || `Chat API error: ${response.status}`);
   }
-
-  const data = await response.json();
   return (
     data.answer ||
     data.output_text ||
@@ -112,8 +111,9 @@ async function submitQuestion(rawQuestion) {
     const reply = await fetchAssistantReply(question);
     chatMessages.lastChild.textContent = reply;
   } catch (error) {
+    console.error("Chat request failed:", error);
     chatMessages.lastChild.textContent =
-      "The AI assistant is temporarily rate-limited. Please try again in a few minutes.";
+      error.message || "The AI assistant is temporarily unavailable. Please try again later.";
   } finally {
     chatSend.disabled = false;
     heroSend.disabled = false;

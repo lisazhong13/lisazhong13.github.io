@@ -26,11 +26,11 @@
   <main>
     <section id="home" class="hero section">
       <div class="hero-text">
-        <p class="eyebrow">Actuarial • Data Science • Machine Learning</p>
+        <p class="eyebrow">Machine Learning • Data Science • Applied AI</p>
         <h1>Hi, I'm Jingwen (Lisa) — I build data-driven tools, models, and analytics for real business problems.</h1>
         <p class="hero-subtitle">
-          Incoming MScAC student at the University of Toronto with experience in actuarial pricing,
-          data analysis, statistical modeling, and ML research.
+          Incoming MScAC Data Science student at the University of Toronto with experience in machine learning research,
+          production data science, optimization, and large-scale data pipelines.
         </p>
         <div class="button-row">
           <a class="button primary" href="#projects">View Projects</a>
@@ -54,23 +54,31 @@
         <p class="section-label">About</p>
         <h2>Turning messy data into clear decisions.</h2>
         <p class="about-intro">
-          I am interested in data science, actuarial analytics, and machine learning. My work spans
-          pricing model validation, automated data pipelines, statistical analysis, and research projects involving
-          deep learning and computer vision.
+          I am interested in machine learning, data science, and applied AI. My work spans deep learning research,
+          production data pipelines, optimization, and large-scale modeling across insurance, geospatial, and NLP domains.
         </p>
       </div>
       <div class="about-details">
         <p><strong>Education:</strong></p>
         <ul class="about-education">
-          <li>B.Sc. in Data Science Specialist & Actuarial Science Major, University of Toronto (Sep 2022 - May 2026)</li>
-          <li>Incoming M.Sc. in Applied Comupting -- Data Science Concentration, University of Toronto (Sep 2026 - Present)</li>
+          <li>
+            <strong>MSc in Applied Computing, Data Science Concentration</strong>, University of Toronto (Sep 2026 - Jan 2028, Expected)<br />
+            Vector Scholarship in Artificial Intelligence ($17,500)<br />
+            Relevant coursework: Neural Networks and Deep Learning, Computer Imaging, Data Science, Natural Language Computing, Statistical Methods for Machine Learning and Data Mining
+          </li>
+          <li>
+            <strong>Honours Bachelor of Science — Data Science Specialist &amp; Actuarial Science Major</strong>, University of Toronto (Sep 2022 - Apr 2026)<br />
+            GPA: 3.92/4.0<br />
+            Dean's List; University of Toronto Excellence Award (2024 &amp; 2025, $15,000)<br />
+            Relevant coursework: Machine Learning, Data Structures and Algorithm Design, Time Series, Probability &amp; Statistical Inference
+          </li>
         </ul>
 
         <p><strong>Awards:</strong></p>
         <ul class="about-awards">
           <li>Vector Scholarship in Artificial Intelligence, 2026-27 ($17,500)</li>
           <li>University of Toronto Excellence Award (UTEA), 2024 and 2025 ($15,000)</li>
-          <li>Department of Computer Science Research Award, 2025 ($7,500, declined)</li>
+          <li>Department of Computer Science Research Award, 2025 ($7,500)</li>
           <li>The Robert Bruce Scholarship and Bursary Fund ($1,000)</li>
           <li>Dean's List, all academic years</li>
           <li>New College Council In-Course Scholarship ($750)</li>
@@ -85,41 +93,46 @@
       <div class="card-grid">
         <article class="card">
           <div class="card-top">
+            <h3>Data Science Intern</h3>
+            <span>Intact Financial Corporation</span>
+          </div>
+          <p class="date">May 2026 - Aug 2026</p>
+          <ul>
+            <li>Implemented a reinforcement learning-based optimization framework combining predictive modeling and decision optimization for large-scale pricing strategies.</li>
+            <li>Developed model review and data collection workflows in AWS, using GitHub for version control and Airflow to automate multi-script execution and generate model diagnostic visualizations for anomaly detection.</li>
+            <li>Built PySpark testing and analysis pipelines in Databricks to validate model outputs, business logic, and edge cases on large-scale datasets.</li>
+            <li>Implemented portfolio off-balancing algorithms in Databricks, querying production tables from Snowflake and applying Python-based optimization logic to satisfy global constraints while maintaining stable pricing behavior.</li>
+          </ul>
+          <div class="tags"><span>Python</span><span>PySpark</span><span>Databricks</span><span>Snowflake</span><span>Airflow</span><span>AWS</span><span>Git</span><span>Reinforcement Learning</span></div>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
             <h3>Actuarial and Data Science Intern</h3>
             <span>Aviva Canada</span>
           </div>
           <p class="date">Jan 2026 - Apr 2026</p>
           <ul>
-            <li>Designed and automated a data pipeline using SAS, SQL, and Python to ingest and process loss data.</li>
-            <li>Developed logic to merge and reconcile datasets across different granularities (policy-level and claim-level).</li>
-            <li>Built user-facing SAS tools enabling dynamic data extraction and filtering.</li>
-            <li>Investigated data inconsistencies across systems, identifying root causes of premium discrepancies through structured data validation.</li>
+            <li>Supported a major actuarial filing by preparing, validating, and reconciling policy, premium, and loss data across multiple source systems.</li>
+            <li>Automated loss-data ingestion, transformation, and reconciliation workflows using SAS, SQL, and Python, integrating policy- and claim-level datasets across heterogeneous granularities.</li>
+            <li>Built the model structure and reconciled premiums for the system migration of personal private trailer business, validating data consistency and investigating discrepancies between legacy and new systems.</li>
           </ul>
+          <div class="tags"><span>Python</span><span>SQL</span><span>SAS</span><span>Data Pipelines</span><span>Data Validation</span></div>
         </article>
 
         <article class="card">
           <div class="card-top">
-            <h3>Actuarial Intern — Ontario Personal Private Vehicles Pricing</h3>
+            <h3>Actuarial Analyst Intern</h3>
             <span>Aviva Canada</span>
           </div>
-          <p class="date">May 2025 - Aug 2026</p>
+          <p class="date">May 2025 - Aug 2025</p>
           <ul>
-            <li>Supported actuarial pricing using SAS, SQL, Earnix, Excel VBA, and Python.</li>
-            <li>Automated loss and exposure data preparation, reducing review time by around 30%.</li>
-            <li>Reconciled data discrepancies and improved consistency across pricing sources.</li>
-            <li>Prepared broker-facing analysis explaining pricing changes and customer impact.</li>
+            <li>Supported actuarial pricing by leveraging SAS, SQL, and Earnix to build analytical tools and validate models.</li>
+            <li>Pre-processed and analyzed loss and exposure data through automated Excel VBA and Python scripts, reducing data preparation time by 30%.</li>
+            <li>Reconciled discrepancies across data sources, eliminating 98% of data mismatches between variables and premium values.</li>
+            <li>Designed and delivered broker-facing analyses explaining pricing changes, dislocation, segmentation updates, and customer impact.</li>
           </ul>
-        </article>
-
-        <article class="card">
-          <div class="card-top">
-            <h3>Data Science Intern</h3>
-            <span>Intact</span>
-          </div>
-          <p class="date">May 2026 - Present</p>
-          <ul>
-            <li>More information coming soon.</li>
-          </ul>
+          <div class="tags"><span>Python</span><span>SQL</span><span>SAS</span><span>Earnix</span><span>Excel VBA</span><span>Data Analysis</span></div>
         </article>
 
         <article class="card">
@@ -133,6 +146,7 @@
             <li>Built an end-to-end data pipeline for the collection and analysis of data for visualization for the budgeting department.</li>
             <li>Processed and analyzed data using Excel VBA and developed interactive dashboards in Power BI to visualize KPIs of budget variance, departmental expenditures, and forecasting accuracy, supporting evidence-based decision-making.</li>
           </ul>
+          <div class="tags"><span>JavaScript</span><span>MySQL</span><span>Power BI</span><span>Excel VBA</span><span>Data Pipelines</span><span>Data Visualization</span></div>
         </article>
       </div>
     </section>
@@ -141,6 +155,34 @@
       <p class="section-label">Research</p>
       <h2>Research Experiences</h2>
       <div class="research-grid">
+        <article class="card research-card">
+          <div class="research-left">
+            <h3>Spatiotemporal Machine Learning &amp; Geospatial Downscaling</h3>
+            <p>Supervisor: Dr. Meredith Franklin</p>
+            <ul>
+              <li>Developed an end-to-end spatiotemporal deep learning framework to downscale 25 years of MERRA-2 atmospheric data from ~50 km to ~7 km resolution, achieving R² up to 0.94 across regional evaluations.</li>
+              <li>Built large-scale geospatial data and degradation pipelines for NetCDF climate data, implementing regridding, resolution degradation, autocorrelation analysis, and distribution/outlier diagnostics.</li>
+              <li>Designed and evaluated U-Net, transfer-learning, and diffusion-based (DDPM) models in PyTorch, incorporating multi-step temporal context, topographic information, and auxiliary spatial features.</li>
+              <li>Developed rigorous temporal out-of-distribution evaluation across regions and seasons using spatial maps, distributional analysis, R²/RMSE/MAE, and conservation diagnostics.</li>
+              <li>Currently developing an encoder–temporal processor–decoder framework with multi-scale objectives and Transformer-based temporal modeling for improved generalization and uncertainty-aware high-resolution forecasting.</li>
+            </ul>
+            <p class="project-links">
+              <a href="https://docs.google.com/presentation/d/1V_SII1m_vnOxz8w1mrO5Oj0KgmSX7KgIzwWHbQLjejQ/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Presentation</a>
+              <span>•</span>
+              <a href="https://arxiv.org/abs/2512.05139" target="_blank" rel="noopener noreferrer">Paper</a>
+            </p>
+            <div class="tags"><span>PyTorch</span><span>U-Net</span><span>DDPM</span><span>NetCDF</span><span>Geospatial</span><span>Time Series</span></div>
+          </div>
+          <aside class="research-right">
+            <p class="date">May 2025 - Present</p>
+            <p>Department of Statistical Sciences, University of Toronto</p>
+            <div class="research-media-stack">
+              <img class="research-media" src="downscale.png" alt="Spatiotemporal downscaling prediction example map" />
+              <img class="research-media" src="pipeline.png" alt="Spatiotemporal downscaling model pipeline diagram" />
+            </div>
+          </aside>
+        </article>
+
         <article class="card research-card">
           <div class="research-left">
             <h3>The Modeling and Animation of Extreme Weather Events</h3>
@@ -156,39 +198,12 @@
             <div class="tags"><span>Python</span><span>R</span><span>Linux</span><span>Machine Learning</span><span>Model Tuning</span></div>
           </div>
           <aside class="research-right">
-            <p class="date">Aug 2025 - Present</p>
+            <p class="date">Aug 2025 - Apr 2026</p>
             <p>Department of Computer Science & Dynamic Graphics Project, University of Toronto</p>
             <video class="research-media" controls preload="metadata">
               <source src="fortmac_fire_spread.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-          </aside>
-        </article>
-
-        <article class="card research-card">
-          <div class="research-left">
-            <h3>Satellite Image Downscaling</h3>
-            <p>Supervisor: Dr. Meredith Franklin</p>
-            <ul>
-              <li>Developed deep learning and transfer learning models for satellite resolution calibration and downscaling, improving spatial resolution from 50 km to 7 km with mean R^2 around 0.9.</li>
-              <li>Pretrained a U-Net and transferred to a large DDPM model with time-series dust extinction data and static covariates to generate high-resolution outputs.</li>
-              <li>Improved accuracy with region- and season-specific training, cross-validation, and early stopping, reaching R^2 up to 0.94 and RMSE below 0.02.</li>
-              <li>Co-authoring a manuscript on the downscaling framework for peer-reviewed journal submission.</li>
-            </ul>
-            <p class="project-links">
-              <a href="https://docs.google.com/presentation/d/1V_SII1m_vnOxz8w1mrO5Oj0KgmSX7KgIzwWHbQLjejQ/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Presentation</a>
-              <span>•</span>
-              <a href="https://arxiv.org/abs/2512.05139" target="_blank" rel="noopener noreferrer">Paper</a>
-            </p>
-            <div class="tags"><span>PyTorch</span><span>U-Net</span><span>DDPM</span><span>VAE</span><span>Time Series</span></div>
-          </div>
-          <aside class="research-right">
-            <p class="date">May 2025 - Present</p>
-            <p>Department of Statistical Sciences, University of Toronto</p>
-            <div class="research-media-stack">
-              <img class="research-media" src="downscale.png" alt="Satellite image downscaling prediction example map" />
-              <img class="research-media" src="pipeline.png" alt="Satellite image downscaling model pipeline diagram" />
-            </div>
           </aside>
         </article>
 
@@ -363,9 +378,11 @@
       <p class="section-label">Skills</p>
       <h2>Technical Skills</h2>
       <div class="skill-list">
-        <span>Python</span><span>R</span><span>SQL</span><span>SAS</span><span>Java</span><span>JavaScript</span><span>C</span><span>Excel VBA</span>
-        <span>PyTorch</span><span>TensorFlow</span><span>scikit-learn</span><span>Pandas</span><span>Numpy</span><span>OpenCV</span>
-        <span>Git</span><span>SLURM</span><span>Earnix</span>
+        <span>Python</span><span>SQL</span><span>R</span><span>Java</span><span>JavaScript</span><span>C</span>
+        <span>PyTorch</span><span>TensorFlow</span><span>scikit-learn</span>
+        <span>Pandas</span><span>NumPy</span><span>PySpark</span><span>Xarray</span><span>SciPy</span>
+        <span>Databricks</span><span>Snowflake</span><span>Airflow</span><span>Spark</span><span>AWS</span>
+        <span>Git</span><span>Linux</span><span>SLURM</span><span>Power BI</span><span>Tableau</span><span>SAS</span><span>Earnix</span>
       </div>
     </section>
 

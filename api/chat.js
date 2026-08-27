@@ -9,14 +9,19 @@ module.exports = async function handler(req, res) {
   const { question } = req.body || {};
   if (!question) return res.status(400).json({ error: "Missing question" });
 
-  const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${process.env.GROQ_API_KEY}`,
-    },
-    body: JSON.stringify({
-      model: "llama-3.1-8b-instant",
+  if (!process.env.GROQ_API_KEY) {
+    return res.status(500).json({ error: "GROQ_API_KEY is not configured" });
+  }
+
+  try {
+    const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${process.env.GROQ_API_KEY}`,
+      },
+      body: JSON.stringify({
+        model: process.env.GROQ_MODEL || "llama-3.3-70b-versatile",
       messages: [
         {
           role: "system",
@@ -53,21 +58,24 @@ FACTS:
       ],
       temperature: 0.4,
       max_tokens: 300,
-    }),
-  });
-
-  const data = await response.json();
-
-  if (!response.ok) {
-    return res.status(response.status).json({
-      error: data.error?.message || "Groq API error",
-      raw: data,
+      }),
     });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      return res.status(response.status).json({
+        error: data.error?.message || "Groq API error",
+      });
+    }
+
+    const answer = data.choices?.[0]?.message?.content?.trim();
+
+    return res.status(200).json({
+      answer: answer || "Sorry, I could not generate a response.",
+    });
+  } catch (error) {
+    console.error("Groq request failed:", error);
+    return res.status(502).json({ error: "Could not reach the AI provider" });
   }
-
-  const answer = data.choices?.[0]?.message?.content?.trim();
-
-  return res.status(200).json({
-    answer: answer || "Sorry, I could not generate a response.",
-  });
 };
