@@ -57,6 +57,17 @@ function addAssistantMessage(content) {
 }
 
 function buildApiPayload(userQuestion) {
+  const conversationHistory = state.messages
+    .filter((message) => message.content !== "Thinking...")
+    .slice(-9);
+
+  if (
+    conversationHistory.at(-1)?.role === "user" &&
+    conversationHistory.at(-1)?.content === userQuestion
+  ) {
+    conversationHistory.pop();
+  }
+
   return {
     system: CHAT_CONFIG.systemPrompt,
     instruction: CHAT_CONFIG.maxSentencesHint,
@@ -65,7 +76,7 @@ function buildApiPayload(userQuestion) {
       resume_link: CHAT_CONFIG.resumeLink,
       portfolio_sections: ["about", "experience", "research", "projects", "leadership", "skills"],
     },
-    history: state.messages.slice(-8),
+    history: conversationHistory.slice(-8),
   };
 }
 

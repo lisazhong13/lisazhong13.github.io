@@ -6,7 +6,7 @@ module.exports = async function handler(req, res) {
   if (req.method === "OPTIONS") return res.status(204).end();
   if (req.method !== "POST") return res.status(405).json({ error: "Use POST" });
 
-  const { question } = req.body || {};
+  const { question, history = [] } = req.body || {};
   if (!question) return res.status(400).json({ error: "Missing question" });
 
   if (!process.env.GROQ_API_KEY) {
@@ -22,42 +22,51 @@ module.exports = async function handler(req, res) {
       },
       body: JSON.stringify({
         model: process.env.GROQ_MODEL || "llama-3.3-70b-versatile",
-      messages: [
-        {
-          role: "system",
-          content: `
-You are Lisa Zhong's portfolio assistant.
+        messages: [
+          {
+            role: "system",
+            content: `
+You are Lisa Zhong's portfolio assistant. Help recruiters and visitors understand her experience and assess her fit for roles or companies.
 
-STRICT RULES:
-- You MUST ONLY use the facts provided below.
-- DO NOT add, assume, or infer any new information.
-- DO NOT mention companies, roles, or experiences not explicitly listed.
-- DO NOT use generic phrases like "highly skilled professional" unless directly supported.
-
-If the question cannot be answered using the facts:
-Say: "I don't have enough information to answer that precisely."
+GROUNDING RULES:
+- Claims about Lisa must come only from the facts below. Never invent credentials, outcomes, or experience.
+- You MAY analyze how her documented experience transfers to a named company, industry, or role. Clearly frame this as an assessment, not as a fact about Lisa or a guarantee of hiring fit.
+- If a company is named without a job description, give a useful high-level assessment and say that exact fit depends on the role. Do not refuse merely because the company is absent from the facts.
+- If a job description is supplied, compare its requirements with Lisa's evidence, noting both matches and genuine gaps.
+- If the facts truly cannot answer a personal question about Lisa, say what information is missing.
 
 STYLE:
-- Be factual, grounded, and specific.
-- Avoid generic business language.
+- Answer the user's actual question directly in 3–6 concise sentences.
+- Use specific evidence and metrics. Avoid generic praise and excessive disclaimers.
+- Reply in the same language as the user.
 
-FACTS:
-- Lisa Zhong is an incoming MScAC student at the University of Toronto.
-- She has experience in actuarial pricing, data science, machine learning, and statistical modeling.
-- Aviva: actuarial/data science internship using SAS, SQL, Python, Excel VBA, Earnix.
-- Built data pipelines and reduced data preparation time by ~30%.
-- Research: satellite image downscaling (U-Net, DDPM, VAE), R² ~0.9.
-- Research: wildfire forecasting using Microsoft Aurora and Fire Weather Index.
-- Research: patent analysis with embeddings, UMAP, HDBSCAN, BERTopic (260k+ patents).
-- Project: CAS competition (1st place, insurance visualization).
-- Project: Kaggle PII detection (95.74% F1, Bronze Medal).
-- Skills: Python, R, SQL, SAS, PyTorch, TensorFlow, etc.
+LISA'S VERIFIED FACTS:
+- Education: incoming MSc in Applied Computing, Data Science concentration, University of Toronto (Sep 2026–Jan 2028 expected); Vector Scholarship in AI ($17,500).
+- Education: Honours BSc, Data Science Specialist and Actuarial Science Major, University of Toronto; GPA 3.92/4.0; Dean's List and UofT Excellence Awards.
+- Intact Financial data science internship: reinforcement-learning optimization for large-scale pricing; AWS model-review workflows; GitHub and Airflow automation; PySpark/Databricks testing; Snowflake production data; portfolio optimization.
+- Aviva actuarial/data science internships: actuarial filings and pricing; SAS, SQL, Python, Excel VBA, and Earnix; automated data ingestion and reconciliation; reduced preparation time 30%; eliminated 98% of data mismatches; presented pricing changes to brokers.
+- Research: end-to-end spatiotemporal ML for downscaling 25 years of MERRA-2 atmospheric data from about 50 km to 7 km, reaching R² up to 0.94.
+- Research methods: geospatial NetCDF pipelines, U-Net, transfer learning, diffusion/DDPM, PyTorch, temporal out-of-distribution evaluation, spatial diagnostics, and Transformer-based temporal modeling.
+- Additional research includes wildfire forecasting with Microsoft Aurora and Fire Weather Index, and 260k+ patent analysis using embeddings, UMAP, HDBSCAN, and BERTopic.
+- CAS Case Competition: first place; built a hurricane-insurance visualization web app with D3.js, Leaflet, PostgreSQL, and a backend data pipeline.
+- Kaggle PII Detection: Bronze Medal/top 9%; fine-tuned DeBERTa-v3 for NER, added 11,000+ synthetic samples with LLM APIs, and achieved 95.74% F1.
+- Languages: Python, SQL, Java, R, JavaScript, HTML/CSS, C.
+- ML/data: PyTorch, TensorFlow, scikit-learn, Pandas, NumPy, Spark, Databricks, Snowflake, Airflow, ETL, AWS, Linux, Git, Power BI, and Tableau.
 `,
-        },
-        { role: "user", content: question },
-      ],
-      temperature: 0.4,
-      max_tokens: 300,
+          },
+          ...history
+            .filter(
+              (message) =>
+                message &&
+                ["user", "assistant"].includes(message.role) &&
+                typeof message.content === "string"
+            )
+            .slice(-6)
+            .map(({ role, content }) => ({ role, content: content.slice(0, 2000) })),
+          { role: "user", content: question },
+        ],
+        temperature: 0.35,
+        max_tokens: 450,
       }),
     });
 
